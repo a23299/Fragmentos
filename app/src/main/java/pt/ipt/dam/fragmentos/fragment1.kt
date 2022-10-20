@@ -22,12 +22,13 @@ class MyFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var view:View = inflater.inflate(R.layout.fragment1, container, false)
-        var txt:TextView = view.findViewById(R.id.txtMsg)
+        var view: View = inflater.inflate(R.layout.fragment1, container, false)
+        var txt: TextView = view.findViewById(R.id.txtMsg)
         txt.text = param1 + " " + param2
         var btn: Button = view.findViewById(R.id.btn)
         btn.setOnClickListener {
@@ -35,6 +36,7 @@ class MyFragment : Fragment() {
         }
         return view
     }
+
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
